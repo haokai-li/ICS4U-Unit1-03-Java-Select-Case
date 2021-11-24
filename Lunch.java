@@ -34,17 +34,17 @@ final class Lunch {
     /**
     * Time variable.
     */
-    public static final double TIMEA = 1;
+    public static final int TIMEA = 1;
 
     /**
     * Time variable.
     */
-    public static final double TIMEB = 2;
+    public static final int TIMEB = 2;
 
     /**
     * Time variable.
     */
-    public static final double TIMEC = 3;
+    public static final int TIMEC = 3;
 
     /**
     * Time variable.
@@ -72,6 +72,36 @@ final class Lunch {
     public static final double TIMEH = 37.5;
 
     /**
+    * SUB.
+    */
+    public static final String SUBSTRING = "sub";
+
+    /**
+    * PIZZA.
+    */
+    public static final String PIZZASSTRING = "pizza";
+
+    /**
+    * SOUP.
+    */
+    public static final String SOUPSTRING = "soup";
+
+    /**
+    * F variable.
+    */
+    public static final String OUTPUTA = "The total cook time is ";
+
+    /**
+    * F variable.
+    */
+    public static final String OUTPUTB = " minutes and ";
+
+    /**
+    * F variable.
+    */
+    public static final String OUTPUTC = " seconds.";
+
+    /**
     * Prevent instantiation.
     * Throw an exception IllegalStateException.
     * if this ever is called
@@ -91,8 +121,8 @@ final class Lunch {
 
     public static void main(final String[] args) {
         // set
-        final double minute = 0;
-        final double second = 0;
+        double minute = 0;
+        double second = 0;
         final String foodString;
         final int time;
 
@@ -107,61 +137,61 @@ final class Lunch {
 
             switch (time) {
                 case TIMEA:
-                    if ("sub".equals(foodString)) {
+                    if (SUBSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEA;
                         second = TIMED;
-                    } else if ("pizza".equals(foodString)) {
+                    } else if (PIZZASSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMED;
                         second = TIMEF;
-                    } else if ("soup".equals(foodString)) {
+                    } else if (SOUPSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEA;
                         second = TIMEF;
                     }
 
                     // output
-                    System.out.println("The total cook time is " + minute
-                        + " minutes and " + second + " seconds.");
+                    System.out.println(OUTPUTA + minute
+                        + OUTPUTB + second + OUTPUTC);
                     break;
                 case TIMEB:
-                    if ("sub".equals(foodString)) {
+                    if (SUBSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEA;
                         second = TIMEE;
-                    } else if ("pizza".equals(foodString)) {
+                    } else if (PIZZASSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEA;
                         second = TIMEG;
-                    } else if ("soup".equals(foodString)) {
+                    } else if (SOUPSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEB;
                         second = TIMEH;
                     }
 
                     // output
-                    System.out.println("The total cook time is " + minute
-                        + " minutes and " + second + " seconds.");
+                    System.out.println(OUTPUTA + minute
+                        + OUTPUTB + second + OUTPUTC);
                     break;
                 case TIMEC:
-                    if ("sub".equals(foodString)) {
+                    if (SUBSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEB;
                         second = TIMED;
-                    } else if ("pizza".equals(foodString)) {
+                    } else if (PIZZASSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEA;
                         second = TIMEE;
-                    } else if ("soup".equals(foodString)) {
+                    } else if (SOUPSTRING.equals(foodString)) {
                         // calculate
                         minute = TIMEC;
                         second = TIMEE;
                     }
 
                     // output
-                    System.out.println("The total cook time is " + minute
-                        + " minutes and " + second + " seconds.");
+                    System.out.println(OUTPUTA + minute
+                        + OUTPUTB + second + OUTPUTC);
                     break;
                 default:
                     System.out.println("The maximum quantity of food is 3.");
@@ -170,6 +200,6 @@ final class Lunch {
             System.out.println("Something went wrong.");
         }
 
-        System.out.println("Done.");
+        System.out.println("\nDone.");
     }
 }
